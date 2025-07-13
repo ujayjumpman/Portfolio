@@ -23,7 +23,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: #222;
-      line-height: 1.5;
+      line-height: 1.6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -84,14 +84,13 @@
     .header-content {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      flex-wrap: nowrap;
+      gap: 1.5rem;
     }
 
     header h1 {
       font-weight: 700;
-      font-size: 1.5rem;
-      letter-spacing: 1.5px;
+      font-size: 1.4rem;
+      letter-spacing: 1.2px;
       cursor: default;
       background: linear-gradient(45deg, #fff, #a5b4fc);
       -webkit-background-clip: text;
@@ -106,22 +105,51 @@
       to { text-shadow: 0 0 30px rgba(165, 180, 252, 0.8); }
     }
 
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .social-links a {
+      color: #fff;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      padding: 0.5rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+    }
+
+    .social-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px) scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-links .linkedin:hover { color: #0077b5; }
+    .social-links .github:hover { color: #333; }
+    .social-links .instagram:hover { color: #e4405f; }
+
     nav ul {
       display: flex;
       list-style: none;
-      gap: 1.2rem;
+      gap: 2rem;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 1.1rem;
     }
 
     nav ul li {
       cursor: pointer;
-      padding: 0.35rem 0.7rem;
-      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
-      user-select: none;
     }
 
     nav ul li::before {
@@ -143,7 +171,6 @@
       color: white !important;
       position: relative;
       z-index: 1;
-      white-space: nowrap;
     }
 
     nav ul li:hover {
@@ -154,17 +181,17 @@
     main {
       flex-grow: 1;
       max-width: 1200px;
-      margin: 2rem auto 4rem;
+      margin: 3rem auto 5rem;
       padding: 0 1rem;
       position: relative;
       z-index: 1;
     }
 
     section {
-      margin-bottom: 4rem;
-      scroll-margin-top: 80px;
+      margin-bottom: 5rem;
+      scroll-margin-top: 100px;
       opacity: 0;
-      transform: translateY(40px);
+      transform: translateY(50px);
       animation: fadeInUp 0.8s ease forwards;
     }
 
@@ -178,8 +205,8 @@
     h2 {
       color: #fff;
       font-weight: 700;
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
       text-align: center;
       position: relative;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -188,10 +215,10 @@
     h2::after {
       content: '';
       position: absolute;
-      bottom: -8px;
+      bottom: -10px;
       left: 50%;
       transform: translateX(-50%);
-      width: 50px;
+      width: 60px;
       height: 3px;
       background: linear-gradient(90deg, #667eea, #764ba2);
       border-radius: 2px;
@@ -201,16 +228,17 @@
     #about {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
+      gap: 3rem;
       align-items: center;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(20px);
       border-radius: 30px;
-      padding: 2rem;
+      padding: 3rem;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
       border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all 0.4s ease;
       animation-delay: 0.2s;
+      text-align: left;
     }
 
     #about:hover {
@@ -220,7 +248,7 @@
 
     #about img.profile-pic {
       border-radius: 50%;
-      max-width: 210px;
+      max-width: 300px;
       width: 100%;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
       flex-shrink: 0;
@@ -235,78 +263,73 @@
 
     #about-text {
       flex: 1;
-      font-size: 0.85rem;
+      font-size: 1.1rem;
       color: #fff;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      text-align: left;
     }
 
     #about-text h2 {
       text-align: left;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
     #about-text p {
-      margin-bottom: 1rem;
-      line-height: 1.4;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
     }
 
-    /* Experience Section */
+    /* Enhanced Experience Section */
     #experience {
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(20px);
-      border-radius: 30px;
-      padding: 1.8rem 2rem;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(25px);
+      border-radius: 25px;
+      padding: 3rem 3rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
       border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all 0.4s ease;
-      animation-delay: 0.25s;
+      font-size: 1rem;
       color: #eee;
-      font-size: 0.9rem;
+      margin-bottom: 3rem;
+      text-align: left;
     }
 
     #experience:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
     }
 
-    #experience h2 {
-      text-align: left;
-      font-size: 1.7rem;
-      margin-bottom: 1rem;
-      color: white;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-    }
-
-    #experience strong.job-title {
-      color: white;
+    #experience .job-title {
       font-weight: 700;
-      font-size: 1.1rem;
-      display: block;
-      margin-bottom: 0.2rem;
-    }
-
-    #experience strong.company {
       color: white;
-      font-weight: 600;
-      font-size: 1rem;
-      display: block;
-      margin-bottom: 0.2rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.4rem;
     }
 
-    #experience em.dates {
+    #experience .company {
+      font-weight: 700;
+      color: white;
+      font-size: 1.15rem;
+      margin-bottom: 0.4rem;
+    }
+
+    #experience .dates {
       font-style: italic;
-      color: #d6d6d6;
-      margin-bottom: 0.8rem;
+      font-weight: 600;
+      color: #d8c7a9;
+      margin-bottom: 1rem;
       display: block;
-      font-size: 0.95rem;
     }
 
     #experience ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-      color: #e0e0e0;
-      line-height: 1.5;
+      padding-left: 1.2rem;
+      margin-left: 0;
+      color: #eee;
+    }
+
+    #experience ul li {
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
     }
 
     /* Enhanced Projects Section */
@@ -314,7 +337,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       gap: 2.5rem;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
     }
 
     .project-card {
@@ -373,7 +396,7 @@
 
     .project-title {
       font-weight: 700;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin-bottom: 1rem;
       color: #fff;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -381,10 +404,10 @@
 
     .project-desc {
       flex-grow: 1;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       margin-bottom: 1.5rem;
       color: rgba(255, 255, 255, 0.9);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .project-links {
@@ -427,18 +450,23 @@
     }
 
     /* Enhanced Education Section */
+    #education {
+      color: #eee;
+    }
+
     #education article {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
-      padding: 2rem;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(25px);
+      padding: 2.5rem;
       border-radius: 25px;
       margin-bottom: 2rem;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
       transition: all 0.4s ease;
       cursor: default;
       border: 1px solid rgba(255, 255, 255, 0.2);
       position: relative;
       overflow: hidden;
+      text-align: left;
     }
 
     #education article::before {
@@ -464,61 +492,65 @@
 
     .edu-title {
       font-weight: 700;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       color: #fff;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     }
 
     .edu-subtitle {
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: 0.7rem;
       color: rgba(255, 255, 255, 0.9);
     }
 
     .edu-details {
       font-size: 1.1rem;
-      color: rgba(255, 255, 255, 0.85);
+      color: rgba(255, 255, 255, 0.8);
       line-height: 1.6;
     }
 
     /* Enhanced Skills Section */
     #skills {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(25px);
       border-radius: 25px;
       padding: 3rem;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
       border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all 0.4s ease;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
+      color: #eee;
+      margin-bottom: 3rem;
     }
 
     #skills:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
     }
 
     #skills ul {
       list-style: none;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1.5rem;
       font-weight: 700;
-      color: #fff;
+      color: #f0f0f7;
+      font-size: 1rem;
+      padding-left: 0;
     }
 
     #skills ul li {
       background: rgba(255, 255, 255, 0.1);
-      padding: 1rem 1.5rem;
+      padding: 0.7rem 1rem;
       border-radius: 20px;
       cursor: default;
       transition: all 0.3s ease;
       text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       position: relative;
       overflow: hidden;
-      font-size: 1rem;
+      user-select: none;
     }
 
     #skills ul li::before {
@@ -528,7 +560,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
       transition: left 0.5s;
     }
 
@@ -544,29 +576,32 @@
 
     /* Enhanced Services Section */
     #services {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(25px);
       border-radius: 25px;
       padding: 3rem;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
       border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all 0.4s ease;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      color: #eee;
+      margin-bottom: 3rem;
     }
 
     #services:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
     }
 
     #services ul {
       list-style: none;
       font-weight: 700;
-      color: #fff;
+      color: #eee;
       font-size: 1rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1rem;
+      padding-left: 0;
     }
 
     #services ul li {
@@ -578,6 +613,7 @@
       border-radius: 15px;
       transition: all 0.3s ease;
       border: 1px solid rgba(255, 255, 255, 0.1);
+      user-select: none;
     }
 
     #services ul li::before {
@@ -605,27 +641,28 @@
 
     /* Enhanced Contact Section */
     #contact {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(25px);
       border-radius: 25px;
-      padding: 2rem 2.5rem;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      padding: 3rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
       max-width: 600px;
-      margin: 0 auto 4rem auto;
+      margin: 0 auto 5rem auto;
       border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all 0.4s ease;
-      font-size: 0.9rem;
+      font-size: 1rem;
+      color: #eee;
     }
 
     #contact:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
     }
 
     #contact h2 {
-      margin-bottom: 1.8rem;
+      margin-bottom: 2rem;
       font-weight: 700;
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #fff;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       text-align: center;
@@ -641,17 +678,18 @@
       color: #fff;
       margin-bottom: 0.5rem;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      user-select: none;
     }
 
     #contact input,
     #contact textarea {
-      padding: 0.85rem 1.2rem;
-      margin-bottom: 1.2rem;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
       border-radius: 15px;
       border: 2px solid rgba(255, 255, 255, 0.3);
       background: rgba(255, 255, 255, 0.1);
       color: #fff;
-      font-size: 1rem;
+      font-size: 1.1rem;
       transition: all 0.3s ease;
       font-family: inherit;
       backdrop-filter: blur(10px);
@@ -715,18 +753,23 @@
       backdrop-filter: blur(10px);
       color: white;
       text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.95rem;
+      padding: 2rem;
+      font-size: 1rem;
       position: relative;
       z-index: 1000;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
+      user-select: none;
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
       .header-content {
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 1rem;
+      }
+
+      .social-links {
+        order: -1;
       }
 
       nav ul {
@@ -737,11 +780,11 @@
 
       #about {
         flex-direction: column;
-        padding: 1.5rem;
+        padding: 2rem;
       }
 
       #about img.profile-pic {
-        max-width: 180px;
+        max-width: 250px;
         margin: 0 auto;
       }
 
@@ -751,7 +794,7 @@
 
       #contact {
         max-width: 100%;
-        padding: 1.5rem;
+        padding: 2rem;
       }
 
       #skills ul {
@@ -760,10 +803,6 @@
 
       #services ul {
         grid-template-columns: 1fr;
-      }
-
-      #experience {
-        font-size: 0.85rem;
       }
     }
 
@@ -785,18 +824,29 @@
   <header>
     <div class="header-content">
       <h1>Utkarsh Jha</h1>
-      <nav>
-        <ul>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#education" class="nav-link">Education</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/utkarsh-jha-66093822b/" target="_blank" rel="noopener noreferrer" class="linkedin" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/ujayjumpman" target="_blank" rel="noopener noreferrer" class="github" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/ujayjumpman/" target="_blank" rel="noopener noreferrer" class="instagram" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
     </div>
+    <nav>
+      <ul>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
@@ -822,9 +872,9 @@
     <!-- Experience Section -->
     <section id="experience" tabindex="0">
       <h2>Experience</h2>
-      <strong class="job-title">Data-AI Engineer</strong>
-      <strong class="company">Gadiel Technologies, Delhi, India</strong>
-      <em class="dates">Jan 2025 - Present</em>
+      <div class="job-title">Data-AI Engineer</div>
+      <div class="company">Gadiel Technologies, Delhi, India</div>
+      <div class="dates">Jan 2025 - Present</div>
       <ul>
         <li>Currently collaborating with WAVE Infratech (The WAVE Group) to deliver and implement IBM Watson solutions.</li>
         <li>As a Data & AI Engineer, I am responsible for architecting and deploying advanced AI models, including those developed with IBM Watson Assistant and Watsonx.ai, to address complex business challenges.</li>
@@ -889,10 +939,12 @@
                 href="https://github.com/ujayjumpman/AI-Meeting-Assistant"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Code</a>
+                >Code</a
+              >
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
